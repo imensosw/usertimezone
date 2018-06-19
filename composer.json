@@ -6,8 +6,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Jay",
-            "email": "jay@gmail.com",
+            "name": "jay",
+            "email": "jparihar@imensosoftware.com",
             "role": "Developer"
         }
     ],
@@ -17,7 +17,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Imenso\\Timezones\\": "src"
+            "imenso\\Timezones\\": "src"
         },
         "classmap": [
             "src/Facade/Timezones.php"
@@ -25,13 +25,13 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Imenso\\Timezones\\Tests\\": "tests"
+            "imenso\\Timezones\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Imenso\\Timezones\\TimezonesServiceProvider"
+                "imenso\\Timezones\\TimezonesServiceProvider"
             ]
         }
     }
