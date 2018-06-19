@@ -18,7 +18,7 @@ class Timezones
         $timeZone = 'UTC';
         if( isset(\Auth::user()->time_zone ))
         {
-            $timeZone = \Auth::user()->time_zone['timeZone'] ;
+            $timeZone = \Auth::user()->time_zone ;
         }
         return \DateTime::createFromFormat($formatForm,$dateTime,new \DateTimeZone($timeZone))->setTimezone(new \DateTimeZone('UTC'))->format('Y-m-d H:i:s');
     }
@@ -34,7 +34,7 @@ class Timezones
         $timeZone = 'UTC';
         if( isset(\Auth::user()->time_zone ))
         {
-            $timeZone = \Auth::user()->time_zone['timeZone'] ;
+            $timeZone = \Auth::user()->time_zone ;
         }
         return \DateTime::createFromFormat("Y-m-d H:i:s",$dateTime,new \DateTimeZone('UTC'))->setTimezone(new \DateTimeZone($timeZone))->format($formatTo);
     }
