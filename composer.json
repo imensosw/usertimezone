@@ -15,7 +15,7 @@
     },
     "autoload": {
         "psr-4": {
-            "imenso\\Timezones\\": "src"
+            "Imenso\\Timezones\\": "src"
         },
         "classmap": [
             "src/Facade/Timezones.php"
@@ -23,13 +23,13 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "imenso\\Timezones\\Tests\\": "tests"
+            "Imenso\\Timezones\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "imenso\\Timezones\\TimezonesServiceProvider"
+                "Imenso\\Timezones\\TimezonesServiceProvider"
             ]
         }
     },
