@@ -36,5 +36,6 @@ class TimezonesServiceProvider extends ServiceProvider
                 return  "<?php echo \Timezones::convertToLocal($DateTime, $Timezone, $format); ?>";
             }
         );
+        $this->publishes([__DIR__ . '/migrations' => $this->app->databasePath() . '/migrations'], 'migrations');
     }
 }
