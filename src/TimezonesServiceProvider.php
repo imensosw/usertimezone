@@ -2,13 +2,12 @@
 
 namespace Imenso\Timezones;
 
-use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class TimezonesServiceProvider extends ServiceProvider
 {
     /**
-     * Register bindings in the container.
+     * Register bindings in the container teat 1.
      *
      * @return void
      */
@@ -34,7 +33,7 @@ class TimezonesServiceProvider extends ServiceProvider
             function ($expression) {
                 list($DateTime, $Timezone, $format) = explode(',', $expression);
 
-                return  "<?php echo \Timezones::toLocal($DateTime, $Timezone, $format); ?>";
+                return  "<?php echo \Timezones::convertToLocal($DateTime, $Timezone, $format); ?>";
             }
         );
     }
