@@ -34,5 +34,7 @@
                 "imenso\\Timezones\\TimezonesServiceProvider"
             ]
         }
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
