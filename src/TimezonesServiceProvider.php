@@ -1,7 +1,7 @@
 <?php
 
 namespace Imenso\Timezones;
-
+use Illuminate\Support\Facades\Schema ;
 use Illuminate\Support\ServiceProvider;
 
 class TimezonesServiceProvider extends ServiceProvider
@@ -19,6 +19,22 @@ class TimezonesServiceProvider extends ServiceProvider
                 return new \Imenso\Timezones\Timezones;
             }
         );
+
+        $this->registerPublishables();
+
+    }
+    public function registerPublishables()
+    {
+        $basepath = dirname(path: __DIR__ );
+        $arrPublishable = [
+            'migrations' => 
+            [
+                "$basepath/publishable/database/migrations" => database_path( path: 'migrations'),
+            ]
+        ];
+        foreach ($arrPublishable as $group => $paths) {
+            $this->publishes( $paths , $group ) ;
+        }
     }
 
     /**
@@ -28,9 +44,7 @@ class TimezonesServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->publishes([
-            __DIR__ . '/migrations' => $this->app->databasePath() . '/migrations'
-        ], 'migrations');
+        Schema::defaultStringLenght(191);
         
         Blade::directive(
             'displayDate',
@@ -42,4 +56,7 @@ class TimezonesServiceProvider extends ServiceProvider
         );
         
     }
+
+
+
 }
