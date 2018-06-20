@@ -28,6 +28,10 @@ class TimezonesServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->publishes([
+            __DIR__ . '/migrations' => $this->app->databasePath() . '/migrations'
+        ], 'migrations');
+        
         Blade::directive(
             'displayDate',
             function ($expression) {
@@ -36,6 +40,6 @@ class TimezonesServiceProvider extends ServiceProvider
                 return  "<?php echo \Timezones::convertToLocal($DateTime, $Timezone, $format); ?>";
             }
         );
-        $this->publishes([__DIR__ . '/migrations' => $this->app->databasePath() . '/migrations'], 'migrations');
+        
     }
 }
