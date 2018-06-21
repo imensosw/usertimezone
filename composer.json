@@ -1,9 +1,9 @@
 {
     "name": "imenso/timezones",
-    "description": "package to show time",
-    "license": "MTI",
-    "minimum-stability": "dev",
-    "require": {},
+    "description": "Timezone helpers to convert to and from UTC with Laravel Blade directives",
+    "keywords": ["Timezone", "UTC", "Conversion", "Helpers", "Laravel", "DateTime"],
+    "homepage": "https://github.com/mikebarlow/Timezones",
+    "license": "MIT",
     "authors": [
         {
             "name": "jay",
@@ -11,4 +11,28 @@
             "role": "Developer"
         }
     ],
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Imenso\\Timezones\\": "src"
+        },
+        "classmap": [
+            "src/Facade/Timezones.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Imenso\\Timezones\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Imenso\\Timezones\\TimezonesServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
