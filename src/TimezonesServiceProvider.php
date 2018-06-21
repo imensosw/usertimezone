@@ -25,11 +25,11 @@ class TimezonesServiceProvider extends ServiceProvider
     }
     public function registerPublishables()
     {
-        $basepath = dirname(path: __DIR__ );
+        $basepath = dirname( __DIR__ );
         $arrPublishable = [
             'migrations' => 
             [
-                "$basepath/publishable/database/migrations" => database_path( path: 'migrations'),
+                "$basepath/publishable/database/migrations" => database_path(  'migrations'),
             ]
         ];
         foreach ($arrPublishable as $group => $paths) {
