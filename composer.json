@@ -2,7 +2,8 @@
     "name": "imenso/timezones",
     "description": "package to show time",
     "license": "MTI",
-    
+    "minimum-stability": "dev",
+    "prefer-stable" : true,
     "require": {},
     "authors": [
         {
