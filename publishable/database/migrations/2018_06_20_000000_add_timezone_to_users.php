@@ -7,7 +7,7 @@ use Illuminate\Database\Migrations\Migration;
 class AddTimezoneToUsers extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations 1.
      *
      * @return void
      */
@@ -19,7 +19,7 @@ class AddTimezoneToUsers extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * Reverse the migrations 12.
      *
      * @return void
      */
