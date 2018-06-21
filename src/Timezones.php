@@ -8,7 +8,7 @@ use DateTimeZone;
 class Timezones
 {
     /**
-     * convert the given DateTime into user timezone 1111
+     * convert the given DateTime into user timezone
      * @param string $dateTime
      * @param string $formatForm
      * @return string
@@ -25,7 +25,7 @@ class Timezones
     }
 
     /**
-     * convert the given DateTime from UTC into user timezone 222
+     * convert the given DateTime from UTC into user timezone
      * @param string $dateTime
      * @param string $formatTo 
      * @return string

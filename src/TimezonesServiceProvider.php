@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 class TimezonesServiceProvider extends ServiceProvider
 {
     /**
-     * Register bindings in the container teat 11111.
+     * Register bindings in the container teat.
      *
      * @return void
      */
@@ -38,20 +38,19 @@ class TimezonesServiceProvider extends ServiceProvider
     }
 
     /**
-     * Perform post-registration booting of services.  222
+     * Perform post-registration booting of services.
      *
      * @return void
      */
     public function boot()
     {
-        Schema::defaultStringLenght(191);
-        
-        Blade::directive(
+       
+        \Blade::directive(
             'displayDate',
             function ($expression) {
                 list($DateTime, $Timezone, $format) = explode(',', $expression);
 
-                return  "<?php echo \Timezones::convertToLocal($DateTime, $Timezone, $format); ?>";
+                return  "<?php echo \Timezones::toLocal($DateTime, $Timezone, $format); ?>";
             }
         );
         

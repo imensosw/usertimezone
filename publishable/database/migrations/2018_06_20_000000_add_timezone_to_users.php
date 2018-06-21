@@ -7,19 +7,19 @@ use Illuminate\Database\Migrations\Migration;
 class AddTimezoneToUsers extends Migration
 {
     /**
-     * Run the migrations 1.
+     * Run the migrations.
      *
      * @return void
      */
     public function up()
     {
         Schema::table('users', function ($table) {
-            $table->string('time_zone')->after('remember_token')->nullable()->default('UTC');;
+            $table->string('time_zone')->after('remember_token')->nullable()->default('UTC');
         });
     }
 
     /**
-     * Reverse the migrations 12.
+     * Reverse the migrations.
      *
      * @return void
      */
