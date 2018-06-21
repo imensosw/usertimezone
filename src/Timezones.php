@@ -8,7 +8,7 @@ use DateTimeZone;
 class Timezones
 {
     /**
-     * convert the given DateTime into user timezone
+     * convert the given DateTime into user timezone 1111
      * @param string $dateTime
      * @param string $formatForm
      * @return string
@@ -16,6 +16,7 @@ class Timezones
     public function toUTC($dateTime, $formatForm )
     {
         $timeZone = 'UTC';
+        
         if( isset(\Auth::user()->time_zone ))
         {
             $timeZone = \Auth::user()->time_zone ;
@@ -24,14 +25,15 @@ class Timezones
     }
 
     /**
-     * convert the given DateTime from UTC into user timezone
+     * convert the given DateTime from UTC into user timezone 222
      * @param string $dateTime
      * @param string $formatTo 
      * @return string
      */
     public function toLocal($dateTime,  $formatTo = 'Y-m-d H:i:s')
     {
-        $timeZone = 'UTC';
+        $timeZone = 'UTC'; 
+
         if( isset(\Auth::user()->time_zone ))
         {
             $timeZone = \Auth::user()->time_zone ;

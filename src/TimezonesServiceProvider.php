@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
 class TimezonesServiceProvider extends ServiceProvider
 {
     /**
-     * Register bindings in the container teat 1.
+     * Register bindings in the container teat 11111.
      *
      * @return void
      */
@@ -38,7 +38,7 @@ class TimezonesServiceProvider extends ServiceProvider
     }
 
     /**
-     * Perform post-registration booting of services.
+     * Perform post-registration booting of services.  222
      *
      * @return void
      */
