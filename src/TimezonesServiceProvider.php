@@ -29,7 +29,7 @@ class TimezonesServiceProvider extends ServiceProvider
         $arrPublishable = [
             'migrations' => 
             [
-                "$basepath/publishable/database/migrations" => database_path(  'migrations'),
+                "$basepath/publishable/database/migrations" => database_path('migrations'),
             ]
         ];
         foreach ($arrPublishable as $group => $paths) {

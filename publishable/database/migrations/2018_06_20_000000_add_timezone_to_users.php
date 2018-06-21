@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBannersTable extends Migration
+class AddTimezoneToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,8 @@ class CreateBannersTable extends Migration
      */
     public function up()
     {
-        Schema::create('banners', function (Blueprint $table) {
-            $table->increments('id');
-            $table->string('url');
-            $table->timestamps();
+        Schema::table('users', function ($table) {
+            $table->string('time_zone')->after('remember_token')->nullable()->default('UTC');;
         });
     }
 
@@ -27,6 +25,8 @@ class CreateBannersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('banners');
+        Schema::table('users', function ($table) {
+            $table->dropColumn('time_zone');
+        });
     }
 }
